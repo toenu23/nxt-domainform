@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Nxt Domain Form &amp; DNS Test</title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+		<script src="https://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+		<script src="js/script.js" type="text/javascript"></script>
+		<style type="text/css">
+			#group-ns {
+				display: none;
+			}
+		</style>
+
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	</head>
+	<body>
+
+		<div class="container" style="padding-top: 5px;">
+
+			<div class="row">
+				<div class="col-md-6">
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Nxt Domain Form</h3>
+						</div>
+						<div class="panel-body">
+
+							<form action="" method="post">
+								<div class="form-group">
+									<label for="method">Method</label>
+									<select class="form-control" id="method">
+										<option>IP Address</option>
+										<option>Nameservers</option>
+									</select>
+								</div>
+								<div class="form-group" id="group-ns">
+									<label for="ns">Nameservers</label>
+									<input type="text" class="form-control" id="ns" name="ns" placeholder="ns1.nameserver.com, ns2.nameserver.com" />
+								</div>
+								<div class="form-group" id="group-ip">
+									<label for="ip">IP Address</label>
+									<input type="text" class="form-control" id="ip" name="ip" placeholder="192.168.1.111" />
+								</div>
+								<div class="form-group">
+									<label for="email">Hostmaster E-Mail (optional)</label>
+									<input type="text" class="form-control" id="email" name="email" placeholder="hostmaster@yourdomain" />
+								</div>
+								<div class="form-group">
+									<label for="info">Registrant Information (optional)</label>
+									<input type="text" class="form-control" id="info" name="info" placeholder="MyCompany Inc." />
+								</div>
+
+								<p>
+									<input type="submit" class="btn btn-primary" />
+								</p>
+							</form>
+
+							<h2>Output</h2>
+							<input type="text" class="form-control" id="result-text" placeholder="{}" />
+							Copy this string to the &quot;data&quot; field of your Nxt alias.
+
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-6">
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">Nxt Domain Test</h3>
+						</div>
+						<div class="panel-body">
+
+							<div class="form-group">
+								<label for="domain">Domain name  / Alias</label>
+								<div class="input-group">
+									<input type="text" class="form-control" id="domain" name="domain" placeholder="example" />
+									<div class="input-group-addon">
+										.nxt
+									</div>
+								</div>
+							</div>
+
+							<p>
+								<button type="button" class="btn btn-primary" id="btnTest">
+									Test
+								</button>
+							</p>
+							<br/>
+
+							<div class="panel panel-success">
+								<div class="panel-body" id="test-result"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
